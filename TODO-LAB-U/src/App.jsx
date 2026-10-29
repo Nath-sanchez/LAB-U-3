@@ -106,7 +106,7 @@ function App() {
 function Brand() {
   return <Link to="/" className="flex items-center gap-3">
     <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#f4d6df] text-[#a85f77]"><Flower2 size={23} /></div>
-    <div><p className="text-lg font-extrabold tracking-tight text-[#594640]">petal list<span className="text-[#d18ba0]">.</span></p><p className="text-[11px] tracking-wide text-[#b29a91]">YOUR LITTLE PLANNER</p></div>
+    <div><p className="text-lg font-extrabold tracking-tight text-[#594640]"> RJMN Checklist <span className="text-[#d18ba0]">.</span></p><p className="text-[11px] tracking-wide text-[#b29a91]">YOUR LITTLE PLANNER</p></div>
   </Link>
 }
 function SideLink({ item, onClick }) {
