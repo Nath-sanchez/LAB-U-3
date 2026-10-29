@@ -72,7 +72,7 @@ function App() {
           <p className="mt-1 text-sm leading-6 text-[#876f69]">Small steps make lovely progress. You've got this!</p>
           <div className="mt-4 flex gap-1 text-[#c87991]"><span>✿</span><span>✿</span><span>✿</span></div>
         </div>
-        <p className="mt-5 text-center text-xs text-[#b5a39b]">Petal List · Stay organized softly</p>
+        <p className="mt-5 text-center text-xs text-[#b5a39b]">RJMN CheckList · Stay organized softly</p>
       </aside>
 
       <div className="min-w-0 flex-1">
@@ -95,7 +95,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
           <footer className="mt-12 border-t border-[#eee0d9] pt-5 text-center text-xs text-[#aa958d]">
-            Made with care <span className="text-[#d48fa2]">♥</span> · Petal List To-Do Planner
+            Made with care <span className="text-[#d48fa2]">♥</span> · RJMN CheckList
           </footer>
         </main>
       </div>
@@ -134,7 +134,7 @@ function Dashboard({ groups, tasks }) {
   return <>
     <PageHeading eyebrow="YOUR CALM CORNER" title="A little progress, every day." description="Welcome back! Make space for what matters, one task at a time." action={<Link to="/groups" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#d991a7] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#c87f97]"><Plus size={17} /> Manage groups</Link>} />
     <section className="pink-gradient soft-shadow relative mb-7 overflow-hidden rounded-[2rem] p-6 sm:p-9">
-      <div className="relative z-10 max-w-xl"><div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1.5 text-xs font-bold text-[#a66c7d]"><Sparkles size={14} /> YOUR DAILY CHECK-IN</div><h2 className="text-2xl font-extrabold leading-tight sm:text-3xl">You don't have to do it all.<br />Just start with one thing.</h2><p className="mt-3 max-w-md text-sm leading-6 text-[#896f69]">Keep your tasks organized and celebrate every little win along the way.</p><Link to={groups.length ? `/groups/${groups[0].id}` : '/groups'} className="mt-5 inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-[#a85f77] hover:bg-[#fff9fa]">View my tasks <ChevronRight size={16} /></Link></div>
+      <div className="relative z-10 max-w-xl"><div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1.5 text-xs font-bold text-[#a66c7d]"><Sparkles size={14} /> YOUR DAILY CHECKLIST</div><h2 className="text-2xl font-extrabold leading-tight sm:text-3xl">You don't have to do it all.<br />Just start with one thing.</h2><p className="mt-3 max-w-md text-sm leading-6 text-[#896f69]">Keep your tasks organized and celebrate every little win along the way.</p><Link to={groups.length ? `/groups/${groups[0].id}` : '/groups'} className="mt-5 inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-[#a85f77] hover:bg-[#fff9fa]">View my tasks <ChevronRight size={16} /></Link></div>
       <div className="pointer-events-none absolute -right-3 -top-8 text-[180px] opacity-25 sm:right-8 sm:text-[220px]">🌸</div>
     </section>
     <div className="mb-8 grid gap-4 sm:grid-cols-3">
@@ -230,7 +230,7 @@ function Guide() {
   ]
   return <>
     <PageHeading eyebrow="A LITTLE HELP" title="How to use Petal List" description="Everything you need to get started, in a few simple steps." />
-    <div className="mb-6 rounded-3xl bg-[#f7e3e7] p-6 sm:p-8"><div className="flex items-start gap-4"><span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-[#bd7890]"><BookOpen size={22}/></span><div><h2 className="text-lg font-extrabold">Your guide to a calmer to-do list</h2><p className="mt-2 text-sm leading-6 text-[#896f69]">Organize your work into groups, add small tasks, and mark each one complete when you're done. Your progress is saved in your current browser.</p></div></div></div>
+    <div className="mb-6 rounded-3xl bg-[#f7e3e7] p-6 sm:p-8"><div className="flex items-start gap-4"><span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-[#bd7890]"><BookOpen size={22}/></span><div><h2 className="text-lg font-extrabold">Your guide to a calmer CheckList</h2><p className="mt-2 text-sm leading-6 text-[#896f69]">Organize your work into groups, add small tasks, and mark each one complete when you're done. Your progress is saved in your current browser.</p></div></div></div>
     <div className="space-y-4">{steps.map(([title,desc],i)=><div key={title} className="soft-shadow flex gap-4 rounded-3xl border border-[#f0e4de] bg-white p-5 sm:p-6"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#f8e6ea] font-extrabold text-[#b96f87]">{String(i+1).padStart(2,'0')}</span><div><h3 className="font-bold">{title}</h3><p className="mt-2 text-sm leading-6 text-[#947e76]">{desc}</p></div></div>)}</div>
   </>
 }
@@ -242,8 +242,8 @@ function Developers() {
   const add=()=>setMembers(prev=>[...prev,{name:'',role:''}])
   const remove=(i)=>setMembers(prev=>prev.filter((_,j)=>i!==j))
   return <>
-    <PageHeading eyebrow="THE PEOPLE BEHIND THE PROJECT" title="Meet the developers" description="Add the complete names of all group members and describe each person's contribution." />
-    <div className="mb-6 rounded-3xl bg-[#f7e3e7] p-6"><div className="flex items-center gap-4"><span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-[#bd7890]"><Users size={24}/></span><div><h2 className="font-extrabold">Our project team</h2><p className="mt-1 text-sm text-[#896f69]">DCIT 26 · Laboratory 3 · To-Do List Website</p></div></div></div>
+    <PageHeading eyebrow="THE PEOPLE BEHIND THE PROJECT" title="Meet the developers" description=" | Sanchez| Perry | Ditoya | Manabo |" />
+    <div className="mb-6 rounded-3xl bg-[#f7e3e7] p-6"><div className="flex items-center gap-4"><span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-[#bd7890]"><Users size={24}/></span><div><h2 className="font-extrabold">Our project team</h2><p className="mt-1 text-sm text-[#896f69]">DCIT 26 · Laboratory 3 · CheckList Website</p></div></div></div>
     <div className="soft-shadow rounded-3xl border border-[#f0e4de] bg-white p-5 sm:p-7"><div className="mb-5 flex items-center justify-between gap-3"><h2 className="text-lg font-bold">Group members</h2><button onClick={add} className="inline-flex items-center gap-1 rounded-xl bg-[#fbf0f2] px-3 py-2 text-xs font-bold text-[#a85f77] hover:bg-[#f7dfe5]"><Plus size={15}/> Add member</button></div>
       <div className="space-y-4">{members.map((m,i)=><div key={i} className="flex flex-col gap-3 rounded-2xl border border-[#f0e4de] p-4 sm:flex-row sm:items-start"><div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#f8e6ea] font-bold text-[#b96f87]">{i+1}</div><div className="grid flex-1 gap-3 sm:grid-cols-2"><label className="text-xs font-bold text-[#8e7770]">Complete name<input value={m.name} onChange={e=>update(i,'name',e.target.value)} placeholder="Enter complete name" className="mt-2 w-full rounded-xl border border-[#eadbd4] px-3 py-2.5 text-sm font-normal text-[#4d403c] outline-none focus:border-[#d991a7]"/></label><label className="text-xs font-bold text-[#8e7770]">Role / contribution<input value={m.role} onChange={e=>update(i,'role',e.target.value)} placeholder="e.g. UI Design, React Development" className="mt-2 w-full rounded-xl border border-[#eadbd4] px-3 py-2.5 text-sm font-normal text-[#4d403c] outline-none focus:border-[#d991a7]"/></label></div>{members.length>1&&<button onClick={()=>remove(i)} title="Remove member" aria-label="Remove member" className="self-end rounded-xl p-2 text-[#c4aaa1] hover:bg-[#fff0f2] hover:text-[#bb657e] sm:self-center"><Trash2 size={16}/></button>}</div>)}</div>
       <button onClick={()=>{localStorage.setItem('petal-developers',JSON.stringify(members));setSaved(true);setTimeout(()=>setSaved(false),2500)}} className="mt-5 rounded-2xl bg-[#d991a7] px-5 py-3 text-sm font-bold text-white hover:bg-[#c87f97]">Save team details</button>{saved&&<span className="ml-3 text-sm font-semibold text-[#718b68]">Team details saved!</span>}
